@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { asset } from '../utils/asset';
 
 /**
  * "Why Choose PGNOW?" Section
@@ -56,12 +57,12 @@ const WhyChoose = () => {
               <div className="fst_left_wh">
                 <ul>
                   <li>
-                    <img src="/images/air_condition.webp" alt="Air Conditioner" />
+                    <img src={asset('images/air_condition.webp')} alt="Air Conditioner" />
                     <div className="clearfix"></div>
                     <span>Air Conditioner</span>
                   </li>
                   <li>
-                    <img src="/images/air_condition.webp" alt="Balcony" />
+                    <img src={asset('images/air_condition.webp')} alt="Balcony" />
                     <div className="clearfix"></div>
                     <span>Balcony</span>
                   </li>
@@ -70,17 +71,17 @@ const WhyChoose = () => {
               <div className="center_wh">
                 <ul>
                   <li>
-                    <img src="/images/bed.webp" alt="Extra Bed" />
+                    <img src={asset('images/bed.webp')} alt="Extra Bed" />
                     <div className="clearfix"></div>
                     <span>Extra Bed</span>
                   </li>
                   <li>
-                    <img src="/images/flat_tv.webp" alt="Flat TV" />
+                    <img src={asset('images/flat_tv.webp')} alt="Flat TV" />
                     <div className="clearfix"></div>
                     <span>Flat TV</span>
                   </li>
                   <li>
-                    <img src="/images/innercon.webp" alt="Hot & Cold Water" />
+                    <img src={asset('images/innercon.webp')} alt="Hot & Cold Water" />
                     <div className="clearfix"></div>
                     <span>Hot &amp; Cold Water</span>
                   </li>
@@ -89,12 +90,12 @@ const WhyChoose = () => {
               <div className="right_wh">
                 <ul>
                   <li>
-                    <img src="/images/com.webp" alt="InterCom" />
+                    <img src={asset('images/com.webp')} alt="InterCom" />
                     <div className="clearfix"></div>
                     <span>InterCom</span>
                   </li>
                   <li>
-                    <img src="/images/free_wifi.webp" alt="Free Wifi" />
+                    <img src={asset('images/free_wifi.webp')} alt="Free Wifi" />
                     <div className="clearfix"></div>
                     <span>Free Wifi</span>
                   </li>

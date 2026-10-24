@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { locations } from '../data/locations';
+import { asset } from '../utils/asset';
 
 /**
  * Hero Banner Section
@@ -41,12 +42,12 @@ const Banner = () => {
               </h4>
               <img
                 className="arrow_bt"
-                src="/images/arrow_bt.webp"
+                src={asset('images/arrow_bt.webp')}
                 alt="Arrow pointer"
               />
               <a href="#house-1">
                 <img
-                  src="/images/view_room_btn.webp"
+                  src={asset('images/view_room_btn.webp')}
                   className="view_bnt"
                   alt="View Rooms"
                 />
@@ -82,7 +83,7 @@ const Banner = () => {
           <div className="col-md-6">
             <img
               className="img-fluid"
-              src="/images/banner.webp"
+              src={asset('images/banner.webp')}
               alt="Comfortable PG room interiors"
             />
           </div>

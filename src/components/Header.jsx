@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { asset } from '../utils/asset';
 
 /**
  * Global Header Component
@@ -31,7 +32,7 @@ const Header = () => {
           <div className="col-md-2">
             <div className="logo">
               <a href="/">
-                <img className="img-fluid" src="/images/logo.webp" alt="PGNow Logo" />
+                <img className="img-fluid" src={asset('images/logo.webp')} alt="PGNow Logo" />
               </a>
             </div>
           </div>
@@ -39,13 +40,13 @@ const Header = () => {
             <div className="top_head text-end">
               <ul>
                 <li>
-                  <img src="/images/phn_icon.webp" alt="Phone" />{' '}
+                  <img src={asset('images/phn_icon.webp')} alt="Phone" />{' '}
                   <a href="tel:+918130238788" target="_blank" rel="noreferrer">
                     +91-8130238788
                   </a>
                 </li>
                 <li>
-                  <img src="/images/email_icn.webp" alt="Email" />{' '}
+                  <img src={asset('images/email_icn.webp')} alt="Email" />{' '}
                   <a href="mailto:info@pgnow.co.in" target="_blank" rel="noreferrer">
                     info@pgnow.co.in
                   </a>

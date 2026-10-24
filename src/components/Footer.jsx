@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { asset } from '../utils/asset';
 
 /**
  * Global Site Footer Component
@@ -50,7 +51,7 @@ const Footer = () => {
         <div id="bt_top" className="row align-items-center">
           <div className="col-md-2">
             <a href="/">
-              <img src="/images/logo.webp" className="img-fluid" alt="PGNow Logo" />
+              <img src={asset('images/logo.webp')} className="img-fluid" alt="PGNow Logo" />
             </a>
           </div>
           <div className="col-md-8 offset-md-2">
@@ -157,19 +158,19 @@ const Footer = () => {
               <ul>
                 <li>
                   <span className="img_icn">
-                    <img src="/images/mb_icn.webp" alt="Phone" />
+                    <img src={asset('images/mb_icn.webp')} alt="Phone" />
                   </span>
                   <a href="tel:+918130238788">+91-8130238788</a>
                 </li>
                 <li>
                   <span className="img_icn">
-                    <img src="/images/mail_ic.webp" alt="Email" />
+                    <img src={asset('images/mail_ic.webp')} alt="Email" />
                   </span>
                   <a href="mailto:info@pgnow.co.in">info@pgnow.co.in</a>
                 </li>
                 <li>
                   <span className="img_icn">
-                    <img src="/images/add_ic.webp" alt="Address" />
+                    <img src={asset('images/add_ic.webp')} alt="Address" />
                   </span>
                   <p>Sunshine Homes, Village Raipur, Opp Gate No. 2 Amity University, Sector 126, Noida-201304</p>
                 </li>
@@ -190,7 +191,7 @@ const Footer = () => {
               <p>
                 Designed By{' '}
                 <a href="https://omsoftsolution.com/" target="_blank" rel="noreferrer">
-                  <img src="/images/designer_by.webp" alt="Om Soft Solution" />
+                  <img src={asset('images/designer_by.webp')} alt="Om Soft Solution" />
                 </a>
               </p>
             </div>
@@ -201,7 +202,7 @@ const Footer = () => {
       {/* Floating Call & WhatsApp Buttons */}
       <div className="floating-buttons">
         <a href="tel:918130238788" className="call-btn" aria-label="Call Now">
-          <img src="/images/call1.webp" alt="Call Now" />
+          <img src={asset('images/call1.webp')} alt="Call Now" />
         </a>
         <a
           href="https://wa.me/918130238788?text=Hello!%20I'm%20interested%20in%20your%20services."
@@ -210,7 +211,7 @@ const Footer = () => {
           className="whatsapp-btn"
           aria-label="Chat on WhatsApp"
         >
-          <img src="/images/whatsapp1.webp" alt="WhatsApp" />
+          <img src={asset('images/whatsapp1.webp')} alt="WhatsApp" />
         </a>
       </div>
     </footer>

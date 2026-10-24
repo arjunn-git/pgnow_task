@@ -1,4 +1,5 @@
 import React from 'react';
+import { asset } from '../utils/asset';
 
 /**
  * Reusable Property Card component
@@ -35,22 +36,22 @@ const PropertyCard = ({
         <h3>{title}</h3>
         <ul>
           <li>
-            <img src="/images/ac.png" alt="Fully AC" /> Fully Ac
+            <img src={asset('images/ac.png')} alt="Fully AC" /> Fully Ac
           </li>
           <li>
-            <img src="/images/light.png" alt="24*7 Power" /> 24*7 Power
+            <img src={asset('images/light.png')} alt="24*7 Power" /> 24*7 Power
           </li>
           <li>
-            <img src="/images/home.png" alt="Feel Like Home" /> Feel Like Home
+            <img src={asset('images/home.png')} alt="Feel Like Home" /> Feel Like Home
           </li>
           <li>
-            <img src="/images/wifi2.png" alt="Free WiFi" /> Free WIFI
+            <img src={asset('images/wifi2.png')} alt="Free WiFi" /> Free WIFI
           </li>
           <li>
-            <img src="/images/drop.png" alt="R.O. Water" /> R.O. Water
+            <img src={asset('images/drop.png')} alt="R.O. Water" /> R.O. Water
           </li>
           <li>
-            <img src="/images/parking.png" alt="Parking" /> Parking
+            <img src={asset('images/parking.png')} alt="Parking" /> Parking
           </li>
         </ul>
       </div>

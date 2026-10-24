@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from './Slider';
+import { asset } from '../utils/asset';
 
 /**
  * "Reliable, Affordable, and Packed with Amenities" Section
@@ -7,12 +8,12 @@ import Slider from './Slider';
  */
 const ReliableAffordable = () => {
   const facilityItems = [
-    { label: 'Fully Ac', icon: '/images/ac.png' },
-    { label: 'Free WIFI', icon: '/images/wifi2.png' },
-    { label: 'R.O. Water', icon: '/images/drop.png' },
-    { label: 'Feel Like Home', icon: '/images/home.png' },
-    { label: '24*7 Power', icon: '/images/light.png' },
-    { label: 'Parking', icon: '/images/parking.png' }
+    { label: 'Fully Ac', icon: asset('images/ac.png') },
+    { label: 'Free WIFI', icon: asset('images/wifi2.png') },
+    { label: 'R.O. Water', icon: asset('images/drop.png') },
+    { label: 'Feel Like Home', icon: asset('images/home.png') },
+    { label: '24*7 Power', icon: asset('images/light.png') },
+    { label: 'Parking', icon: asset('images/parking.png') }
   ];
 
   const sliderSettings = {
@@ -50,8 +51,8 @@ const ReliableAffordable = () => {
           </div>
           <div className="col-md-4 col-12 text-center abotimagewrap">
             <div className="imgWrapper">
-              <img className="abt1" src="/images/pn27.jpg" alt="PG Room Interior" />
-              <img className="abt2" src="/images/pn233-min.webp" alt="PG Facility" />
+              <img className="abt1" src={asset('images/pn27.jpg')} alt="PG Room Interior" />
+              <img className="abt2" src={asset('images/pn233-min.webp')} alt="PG Facility" />
             </div>
           </div>
           <div className="col-md-4 col-12">

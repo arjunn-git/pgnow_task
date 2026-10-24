@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { asset } from '../utils/asset';
 
 /**
  * Lead Capture Callback Request Modal
@@ -67,7 +68,7 @@ const EnquiryModal = () => {
             <form className="Enquiry" onSubmit={handleSubmit}>
               <div className="phone_num">
                 <span className="flagind">
-                  <img src="/images/country-flag.png" alt="India flag" />
+                  <img src={asset('images/country-flag.png')} alt="India flag" />
                   +91
                 </span>
                 <input
