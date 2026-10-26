@@ -1,12 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { asset } from '../utils/asset';
 
 /**
  * PropertyDetailsModal
- * Quick-view dialog displaying room tariffs, sharing options, and amenities.
+ * Quick-view dialog displaying interactive photo gallery, room tariffs, sharing options, and amenities.
  */
 const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
   const dialogRef = useRef(null);
+  const [activePhoto, setActivePhoto] = useState(property?.image);
+
+  useEffect(() => {
+    if (property) {
+      setActivePhoto(property.image);
+    }
+  }, [property]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -57,6 +64,10 @@ const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
 
   if (!property) return null;
 
+  const currentGallery = property.gallery && property.gallery.length > 0
+    ? property.gallery
+    : [{ label: 'Bedroom', url: property.image }];
+
   return (
     <dialog
       ref={dialogRef}
@@ -70,6 +81,7 @@ const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
           <div>
             <span className="badge-target">{property.target}</span>
             <span className="badge-status">{property.status}</span>
+            {property.badge && <span className="badge-urgency">{property.badge}</span>}
           </div>
           <button
             type="button"
@@ -87,7 +99,7 @@ const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
             <div className="col-md-6">
               <div className="modal-img-container">
                 <img
-                  src={property.image}
+                  src={activePhoto || property.image}
                   alt={property.title}
                   className="modal-property-img"
                 />
@@ -96,7 +108,26 @@ const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
                   <span>{property.gender} PG</span>
                 </div>
               </div>
-              <div className="distance-info">
+
+              {/* Interactive Thumbnail Gallery Switcher */}
+              {currentGallery.length > 1 && (
+                <div className="modal-gallery-thumbnails">
+                  {currentGallery.map((photo, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      className={`gallery-thumb-btn ${activePhoto === photo.url ? 'active' : ''}`}
+                      onClick={() => setActivePhoto(photo.url)}
+                      title={`View ${photo.label}`}
+                    >
+                      <img src={photo.url} alt={photo.label} />
+                      <span>{photo.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <div className="distance-info mt-2">
                 📍 <strong>Location:</strong> {property.distance || 'Sector 125, Noida (Near Amity University)'}
               </div>
             </div>

@@ -14,6 +14,7 @@ const PropertyCard = (props) => {
     gender,
     genderIcon,
     status,
+    badge,
     title,
     price,
     distance,
@@ -58,6 +59,11 @@ const PropertyCard = (props) => {
             </div>
           )}
         </div>
+        {badge && (
+          <div className="property-demand-badge">
+            {badge}
+          </div>
+        )}
         <ul>
           <li>
             <img src={asset('images/ac.png')} alt="Fully AC" /> Fully Ac

@@ -15406,3 +15406,138 @@ dialog::backdrop {
     transform: translate(-50%, 0);
   }
 }
+
+
+/* --- Top Admissions & Offer Announcement Strip --- */
+.top-announcement-strip {
+  background: linear-gradient(90deg, #00224f 0%, #003a83 60%, #0b499e 100%);
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 0.86rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.announcement-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.announcement-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.announcement-pill {
+  background: #dc8e16;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.announcement-text {
+  color: #f1f5f9;
+}
+
+.announcement-text strong {
+  color: #ffd166;
+  font-weight: 700;
+}
+
+.btn-claim-offer-top {
+  background: #dc8e16;
+  color: #ffffff;
+  border: none;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-claim-offer-top:hover {
+  background: #f59e0b;
+  transform: scale(1.04);
+}
+
+/* --- Property Demand Urgency Badge --- */
+.property-demand-badge {
+  display: inline-block;
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #ffedd5;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+
+/* --- Quick View Modal Thumbnail Gallery Switcher --- */
+.modal-gallery-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.gallery-thumb-btn {
+  flex: 1;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumb-btn img {
+  width: 100%;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.gallery-thumb-btn span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.gallery-thumb-btn:hover {
+  border-color: #003a83;
+}
+
+.gallery-thumb-btn.active {
+  border-color: #003a83;
+  background: #eff6ff;
+}
+
+.gallery-thumb-btn.active span {
+  color: #003a83;
+  font-weight: 700;
+}
+
+.badge-urgency {
+  background: #ffedd5;
+  color: #c2410c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 6px;
+}
