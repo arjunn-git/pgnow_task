@@ -14620,38 +14620,169 @@ dialog::backdrop {
   -webkit-backdrop-filter: blur(5px);
 }
 
-/* --- Native Enquiry Dialog Customization --- */
+/* --- Enquiry Dialog Scoped Clean Spacing & Layout --- */
 .enquiry-native-dialog {
   max-width: 480px;
-  width: 90%;
-  border-radius: 14px;
+  width: 92%;
+  border-radius: 16px;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  margin: auto;
 }
 
 .enquiry-dialog-content {
   background: #ffffff;
-  border-radius: 14px;
-  overflow: hidden;
+  padding: 30px 28px 26px;
+  box-sizing: border-box;
+}
+
+.enquiry-dialog-content .mainpagemodal.modal-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 0 16px 0 !important;
+  margin: 0 0 16px 0 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.enquiry-dialog-content .modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  text-align: left;
+}
+
+.enquiry-dialog-content .close-button {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #64748b !important;
+  font-size: 1.3rem !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  padding: 0 !important;
+  flex: none !important;
+  transition: all 0.2s ease;
+}
+
+.enquiry-dialog-content .close-button:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.enquiry-dialog-content .modal-body {
+  padding: 0 !important;
 }
 
 .enquiry-subtitle {
-  font-size: 0.95rem;
-  line-height: 1.45;
-  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin-bottom: 18px;
+  text-align: left;
 }
 
-.name-input {
-  border: 1px solid #d1d5db;
+.enquiry-dialog-content .name-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  border: 1.5px solid #e2e8f0;
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 0.95rem;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   outline: none;
-  transition: border-color 0.2s ease;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.name-input:focus {
+.enquiry-dialog-content .name-input:focus {
   border-color: #003a83;
-  box-shadow: 0 0 0 3px rgba(0, 58, 131, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 58, 131, 0.12);
+}
+
+.enquiry-dialog-content .phone_num {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+
+.enquiry-dialog-content span.flagind {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 10px;
+  border-right: 1.5px solid #cbd5e1;
+  font-weight: 600;
+  color: #334155;
+  z-index: 2;
+  font-size: 0.95rem;
+}
+
+.enquiry-dialog-content span.flagind img {
+  width: 24px;
+  height: auto;
+  border-radius: 2px;
+}
+
+.enquiry-dialog-content .phone_num input.input-field {
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px 10px 84px !important;
+  font-size: 0.95rem;
+  outline: none;
+  margin-bottom: 0;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-dialog-content .phone_num input.input-field:focus {
+  border-color: #003a83;
+  box-shadow: 0 0 0 3px rgba(0, 58, 131, 0.12);
+}
+
+.enquiry-dialog-content .phone_num input.input-field.invalid {
+  border-color: #ef4444;
+}
+
+.enquiry-dialog-content .submit-button {
+  width: 100% !important;
+  height: 48px !important;
+  background: #003a83 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  margin-top: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 58, 131, 0.25);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-dialog-content .submit-button:hover {
+  background: #02244f !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 58, 131, 0.35);
 }
 
 .submission-success-card {

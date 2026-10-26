@@ -51,7 +51,7 @@ const EnquiryModal = () => {
       }
     }
 
-    // Fallback click outside handler for older browser compatibility
+    // Fallback backdrop click handler for older browser compatibility
     const handleBackdropClick = (event) => {
       if (event.target !== dialog) return;
       const rect = dialog.getBoundingClientRect();
@@ -133,10 +133,10 @@ const EnquiryModal = () => {
 
         <div className="modal-body">
           {isSubmitted ? (
-            <div className="submission-success-card text-center py-4">
+            <div className="submission-success-card text-center py-3">
               <div className="success-icon-badge mb-3">✓</div>
-              <h4 className="text-success mb-2">Thank you! Request Received</h4>
-              <p className="mb-3 text-muted">
+              <h4 className="text-success mb-2" style={{ fontWeight: 700 }}>Thank you! Request Received</h4>
+              <p className="mb-3 text-muted" style={{ fontSize: '0.95rem' }}>
                 Our property advisor for <strong>{propertyTitle || 'Amity University Noida Area'}</strong> will call you shortly on:
               </p>
               <div className="confirmed-phone-pill mb-4">
@@ -144,7 +144,7 @@ const EnquiryModal = () => {
               </div>
               <button
                 type="button"
-                className="submit-button w-100"
+                className="submit-button"
                 onClick={handleClose}
               >
                 Done
@@ -152,15 +152,15 @@ const EnquiryModal = () => {
             </div>
           ) : (
             <form className="Enquiry" onSubmit={handleSubmit}>
-              <p className="enquiry-subtitle text-muted mb-3">
+              <p className="enquiry-subtitle">
                 Leave your number and get verified room rates, sharing options, and a free guided visit.
               </p>
 
-              <div className="mb-3">
+              <div className="form-group-custom">
                 <input
                   type="text"
                   placeholder="Your Name (Optional)"
-                  className="input-field w-100 name-input"
+                  className="input-field name-input"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -189,7 +189,7 @@ const EnquiryModal = () => {
                 </p>
               )}
 
-              <button className="submit-button mt-3" type="submit">
+              <button className="submit-button" type="submit">
                 Request Free Callback
               </button>
             </form>
