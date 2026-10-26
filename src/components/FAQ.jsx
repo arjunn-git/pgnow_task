@@ -1,9 +1,8 @@
 import React from 'react';
 
 /**
- * FAQ (Frequently Asked Questions) Section
- * Implements modern semantic mutually exclusive disclosure using native <details name="pgnow-faq">
- * as recommended by Modern Web Guidance.
+ * FAQ Section
+ * Accordion answering common student and parent queries regarding PG accommodations.
  */
 const FAQ = () => {
   const faqs = [

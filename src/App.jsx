@@ -15,7 +15,6 @@ import './App.css';
 
 /**
  * PGNow Main Application
- * Componentized Architecture with Enhanced Interactivity & Modern Web APIs
  */
 function App() {
   return (

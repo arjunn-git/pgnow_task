@@ -14600,7 +14600,7 @@ to {
    Engineered for responsive performance, accessibility, and clean UX
 =============================================================== */
 
-/* --- Modern Dialog Scroll Containment & Backdrop (Modern Web Guidance) --- */
+/* --- Modal Dialog Backdrop & Scroll Containment --- */
 dialog:modal {
   overscroll-behavior: contain;
   border: none;

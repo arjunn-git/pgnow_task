@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { asset } from '../utils/asset';
 
 /**
- * Lead Capture Callback Request Modal
- * Implements modern semantic <dialog> with declarative light dismiss (closedby="any")
- * and scroll containment according to modern web guidance.
+ * EnquiryModal
+ * Handles lead callback requests with phone number validation and success feedback.
  */
 const EnquiryModal = () => {
   const [show, setShow] = useState(false);
@@ -21,7 +20,7 @@ const EnquiryModal = () => {
       setShow(true);
     }, 4000);
 
-    // Global event listener to open enquiry modal for specific properties
+    // Event listener to trigger enquiry modal from property cards
     const handleOpenModal = (e) => {
       if (e.detail?.propertyTitle) {
         setPropertyTitle(e.detail.propertyTitle);
@@ -52,7 +51,7 @@ const EnquiryModal = () => {
       }
     }
 
-    // Modern Web Guidance: Fallback for browsers without closedBy support
+    // Fallback click outside handler for older browser compatibility
     const handleBackdropClick = (event) => {
       if (event.target !== dialog) return;
       const rect = dialog.getBoundingClientRect();

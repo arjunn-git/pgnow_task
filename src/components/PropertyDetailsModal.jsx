@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { asset } from '../utils/asset';
 
 /**
- * PropertyDetailsModal Component
- * Implements accessible modal dialog with light dismiss and scroll containment.
- * Displays detailed pricing, sharing options, and room specifications.
+ * PropertyDetailsModal
+ * Quick-view dialog displaying room tariffs, sharing options, and amenities.
  */
 const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
   const dialogRef = useRef(null);
@@ -23,7 +22,7 @@ const PropertyDetailsModal = ({ property, onClose, onBookVisit }) => {
       }
     }
 
-    // Modern Web Guidance: Fallback for browsers without closedBy support
+    // Fallback backdrop click handler for older browsers
     const handleBackdropClick = (event) => {
       if (event.target !== dialog) return;
       const rect = dialog.getBoundingClientRect();

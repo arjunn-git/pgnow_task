@@ -1,6 +1,6 @@
 import { asset } from '../utils/asset';
 
-// Enriched mock database for PG accommodation properties near Amity University, Noida
+// PG accommodation listings near Amity University, Noida
 export const properties = [
   {
     id: 'PN001',
