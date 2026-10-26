@@ -12,6 +12,14 @@ const Banner = () => {
   const [selectedLocation, setSelectedLocation] = useState('Select your ideal PG room');
   const dropdownRef = useRef(null);
 
+  const quickTags = [
+    { label: '👧 Girls PG', filter: 'girls' },
+    { label: '👦 Boys PG', filter: 'boys' },
+    { label: '🏠 Co-Living', filter: 'unisex' },
+    { label: '📍 Near Amity Gate 2', filter: 'all' },
+    { label: '⚡ Fully AC Rooms', filter: 'all' }
+  ];
+
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
@@ -36,6 +44,13 @@ const Banner = () => {
   const handleSelectLocation = (locName) => {
     setSelectedLocation(locName);
     setDropdownOpen(false);
+    scrollToProperties();
+  };
+
+  const handleTagClick = (tag) => {
+    if (tag.filter) {
+      window.dispatchEvent(new CustomEvent('select-property-filter', { detail: { filter: tag.filter } }));
+    }
     scrollToProperties();
   };
 
@@ -97,6 +112,21 @@ const Banner = () => {
                     ))}
                   </ul>
                 )}
+              </div>
+
+              {/* Quick Search Tag Pills */}
+              <div className="hero-quick-tags">
+                <span className="quick-tags-label">Popular:</span>
+                {quickTags.map((tag) => (
+                  <button
+                    key={tag.label}
+                    type="button"
+                    className="quick-tag-chip"
+                    onClick={() => handleTagClick(tag)}
+                  >
+                    {tag.label}
+                  </button>
+                ))}
               </div>
             </div>
           </div>

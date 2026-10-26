@@ -15302,3 +15302,144 @@ dialog::backdrop {
 .faq-content p {
   margin: 0;
 }
+
+
+/* --- Stats Counter Item Polish --- */
+.stat-counter-item {
+  transition: transform 0.3s ease;
+}
+
+.stat-counter-item:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Hero Banner Quick Search Tag Chips --- */
+.hero-quick-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.quick-tags-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.quick-tag-chip {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.quick-tag-chip:hover {
+  background: #003a83;
+  color: #ffffff;
+  border-color: #003a83;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 58, 131, 0.2);
+}
+
+/* --- Testimonials Stars & Resident Badges --- */
+.enhanced-test-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enhanced-test-item:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-rating-stars {
+  color: #f59e0b;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-shadow: 0 1px 2px rgba(245, 158, 11, 0.2);
+}
+
+.testimonial-resident-tag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.verified-check {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  padding: 1px 7px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #334155;
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+/* --- Global Floating Toast Notification --- */
+.pgnow-floating-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  font-size: 0.92rem;
+  font-weight: 500;
+  animation: toastFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 90%;
+}
+
+.toast-close-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.toast-close-btn:hover {
+  color: #ffffff;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from './Slider';
 import PropertyCard from './PropertyCard';
 import PropertyDetailsModal from './PropertyDetailsModal';
@@ -11,6 +11,16 @@ import { properties } from '../data/properties';
 const AmenitiesSlider = ({ onOpenEnquiry }) => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedProperty, setSelectedProperty] = useState(null);
+
+  useEffect(() => {
+    const handleFilterEvent = (e) => {
+      if (e.detail?.filter) {
+        setActiveFilter(e.detail.filter);
+      }
+    };
+    window.addEventListener('select-property-filter', handleFilterEvent);
+    return () => window.removeEventListener('select-property-filter', handleFilterEvent);
+  }, []);
 
   const filterTabs = [
     { key: 'all', label: 'All PGs', count: properties.length },
@@ -45,7 +55,6 @@ const AmenitiesSlider = ({ onOpenEnquiry }) => {
     if (onOpenEnquiry) {
       onOpenEnquiry(property.title);
     } else {
-      // Trigger global modal open if available
       window.dispatchEvent(new CustomEvent('open-enquiry-modal', { detail: { propertyTitle: property.title } }));
     }
   };
