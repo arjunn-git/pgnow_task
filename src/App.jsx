@@ -7,13 +7,15 @@ import WhyChoose from './components/WhyChoose';
 import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import Offers from './components/Offers';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import EnquiryModal from './components/EnquiryModal';
+import BackToTop from './components/BackToTop';
 import './App.css';
 
 /**
  * PGNow Main Application
- * 1:1 Pixel-Perfect Componentized Architecture
+ * Componentized Architecture with Enhanced Interactivity & Modern Web APIs
  */
 function App() {
   return (
@@ -29,7 +31,7 @@ function App() {
         {/* Introduction & Highlights */}
         <ReliableAffordable />
 
-        {/* Featured Property Listings Slider */}
+        {/* Featured Property Listings Slider with Category Filters */}
         <AmenitiesSlider />
 
         {/* Value Proposition & Feature Badges */}
@@ -43,13 +45,19 @@ function App() {
 
         {/* Exclusive Promotional Offers */}
         <Offers />
+
+        {/* Frequently Asked Questions Disclosure Section */}
+        <FAQ />
       </main>
 
       {/* Footer with Quick Links, Contact, and WhatsApp/Call Widgets */}
       <Footer />
 
-      {/* Callback Lead Capture Modal */}
+      {/* Callback Lead Capture Native Dialog Modal */}
       <EnquiryModal />
+
+      {/* Floating Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }

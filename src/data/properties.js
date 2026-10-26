@@ -1,6 +1,6 @@
 import { asset } from '../utils/asset';
 
-// Mock database for PG accommodation properties near Amity University, Noida
+// Enriched mock database for PG accommodation properties near Amity University, Noida
 export const properties = [
   {
     id: 'PN001',
@@ -11,6 +11,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: 'Booking Open',
+    price: '₹8,500',
+    distance: '2 min walk from Amity Gate 2',
+    sharing: {
+      single: '₹15,000/mo',
+      double: '₹10,500/mo',
+      triple: '₹8,500/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -22,6 +29,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: 'Booking Open',
+    price: '₹9,000',
+    distance: '3 min walk from Amity Gate 3',
+    sharing: {
+      single: '₹16,000/mo',
+      double: '₹11,000/mo',
+      triple: '₹9,000/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -33,6 +47,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: '100% Occupied',
+    price: '₹10,000',
+    distance: 'Sector 125, Near Advant Navis',
+    sharing: {
+      single: '₹17,000/mo',
+      double: '₹12,000/mo',
+      triple: '₹10,000/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -44,6 +65,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: 'Booking Open',
+    price: '₹9,500',
+    distance: 'Near Amity University Noida',
+    sharing: {
+      single: '₹16,500/mo',
+      double: '₹11,500/mo',
+      triple: '₹9,500/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -55,6 +83,13 @@ export const properties = [
     gender: 'Girls',
     genderIcon: asset('images/woman.png'),
     status: 'Booking Open',
+    price: '₹9,500',
+    distance: 'Gated Society, 4 min from Gate 2',
+    sharing: {
+      single: '₹16,500/mo',
+      double: '₹11,500/mo',
+      triple: '₹9,500/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -66,6 +101,13 @@ export const properties = [
     gender: 'Unisex',
     genderIcon: asset('images/unisex.png'),
     status: '50% Occupied',
+    price: '₹8,000',
+    distance: 'Sector 126, Near HCL',
+    sharing: {
+      single: '₹14,500/mo',
+      double: '₹10,000/mo',
+      triple: '₹8,000/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -77,6 +119,13 @@ export const properties = [
     gender: 'Girls',
     genderIcon: asset('images/woman.png'),
     status: '80% Occupied',
+    price: '₹9,000',
+    distance: 'Sector 125, 24x7 Female Warden',
+    sharing: {
+      single: '₹15,500/mo',
+      double: '₹11,000/mo',
+      triple: '₹9,000/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -88,6 +137,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: '100% Occupied',
+    price: '₹8,500',
+    distance: 'Near Raipur Khadar, Sector 126',
+    sharing: {
+      single: '₹15,000/mo',
+      double: '₹10,500/mo',
+      triple: '₹8,500/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -99,6 +155,13 @@ export const properties = [
     gender: 'Boys',
     genderIcon: asset('images/man.png'),
     status: '90% Occupied',
+    price: '₹9,000',
+    distance: '5 min walk from Metro Sector 125',
+    sharing: {
+      single: '₹16,000/mo',
+      double: '₹11,000/mo',
+      triple: '₹9,000/mo'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   },
   {
@@ -110,6 +173,13 @@ export const properties = [
     gender: 'Fully Ac',
     genderIcon: asset('images/ac.png'),
     status: 'Coming Soon',
+    price: 'TBD',
+    distance: 'Upcoming Project Sector 128',
+    sharing: {
+      single: 'Call for info',
+      double: 'Call for info',
+      triple: 'Call for info'
+    },
     amenities: ['Fully Ac', '24*7 Power', 'Feel Like Home', 'Free WIFI', 'R.O. Water', 'Parking']
   }
 ];

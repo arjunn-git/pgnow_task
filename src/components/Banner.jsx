@@ -5,6 +5,7 @@ import { asset } from '../utils/asset';
 /**
  * Hero Banner Section
  * Features primary value proposition, quick room finder dropdown, and image collage.
+ * Smoothly connects search selection with the property showcase section.
  */
 const Banner = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -25,9 +26,17 @@ const Banner = () => {
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
+  const scrollToProperties = () => {
+    const el = document.getElementById('properties-showcase');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSelectLocation = (locName) => {
     setSelectedLocation(locName);
     setDropdownOpen(false);
+    scrollToProperties();
   };
 
   return (
@@ -45,7 +54,7 @@ const Banner = () => {
                 src={asset('images/arrow_bt.webp')}
                 alt="Arrow pointer"
               />
-              <a href="#house-1">
+              <a href="#properties-showcase" onClick={(e) => { e.preventDefault(); scrollToProperties(); }}>
                 <img
                   src={asset('images/view_room_btn.webp')}
                   className="view_bnt"
@@ -60,16 +69,27 @@ const Banner = () => {
                   aria-haspopup="true"
                   aria-expanded={dropdownOpen}
                 >
-                  {selectedLocation}
-                  <span className="dropsearch">PG Now </span>
+                  <span className="selected-loc-text">{selectedLocation}</span>
+                  <span
+                    className="dropsearch"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      scrollToProperties();
+                    }}
+                  >
+                    PG Now 
+                  </span>
                 </button>
                 {dropdownOpen && (
                   <ul className="dropdown-menu show" style={{ display: 'block' }}>
                     {locations.map((loc) => (
                       <li key={loc.id}>
                         <a
-                          href={loc.href}
-                          onClick={() => handleSelectLocation(`${loc.icon} ${loc.name}`)}
+                          href="#properties-showcase"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleSelectLocation(`${loc.icon} ${loc.name}`);
+                          }}
                         >
                           {loc.icon} {loc.name}
                         </a>
@@ -82,7 +102,7 @@ const Banner = () => {
           </div>
           <div className="col-md-6">
             <img
-              className="img-fluid"
+              className="img-fluid hero-banner-illustration"
               src={asset('images/banner.webp')}
               alt="Comfortable PG room interiors"
             />
