@@ -204,7 +204,7 @@ div.gend {
 div.gend img {
   width:18px;
 }
-.property_sl .desc_prop span {
+.property_sl .desc_prop > span:first-child {
   transition:all .5s ease;
   position:absolute;
   right:0;
@@ -214,6 +214,7 @@ div.gend img {
   color:#fff;
   padding:2px 25px;
   clip-path:polygon(0px 0%,104% 0px,100% 100%,0px 100%);
+  z-index: 1;
 }
 .property_sl .desc_prop h3 {
   font-size:20px;
@@ -225,7 +226,7 @@ div.gend img {
   background:#fff;
   color:#000;
 }
-.property_sl .inner_item:hover .desc_prop span {
+.property_sl .inner_item:hover .desc_prop > span:first-child {
   background:#e29007;
   color:#fff;
 }
@@ -14870,13 +14871,20 @@ dialog::backdrop {
 /* --- Property Card Enhancements --- */
 .enhanced-property-card {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-  border-radius: 12px !important;
-  overflow: hidden;
+  border-radius: 8px !important;
+  overflow: visible;
 }
 
 .enhanced-property-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 24px -6px rgba(0, 0, 0, 0.12), 0 8px 12px -4px rgba(0, 0, 0, 0.06) !important;
+}
+
+.enhanced-property-card .top_img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 .property-card-img {
@@ -14887,22 +14895,30 @@ dialog::backdrop {
   transform: scale(1.05);
 }
 
-.property-card-price-tag {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: linear-gradient(135deg, #003a83, #02244f);
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+.property-card-subinfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: -10px;
+  margin-bottom: 14px;
 }
 
-.property-distance {
-  font-size: 0.8rem;
+.property-price-text {
+  color: #dc8e16;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.property-price-text strong {
+  font-size: 1.05rem;
+  color: #003a83;
+}
+
+.property-distance-text {
   color: #64748b;
+  font-size: 0.82rem;
   font-weight: 500;
 }
 
@@ -14917,10 +14933,10 @@ dialog::backdrop {
   background: #f8fafc;
   color: #003a83;
   border: 1.5px solid #003a83;
-  padding: 7px 12px;
+  padding: 8px 14px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;

@@ -41,19 +41,23 @@ const PropertyCard = (props) => {
           <div className="gend">
             <img src={genderIcon} alt={gender} /> {gender}
           </div>
-          {price && (
-            <div className="property-card-price-tag">
-              From {price}/mo
-            </div>
-          )}
         </div>
       </a>
       <div className="desc_prop">
-        <div className="d-flex justify-content-between align-items-center mb-1">
-          <span>{status}</span>
-          {distance && <small className="text-muted property-distance">📍 {distance}</small>}
-        </div>
+        <span>{status}</span>
         <h3>{title}</h3>
+        <div className="property-card-subinfo">
+          {price && (
+            <div className="property-price-text">
+              From <strong>{price}</strong>/mo
+            </div>
+          )}
+          {distance && (
+            <div className="property-distance-text">
+              📍 {distance}
+            </div>
+          )}
+        </div>
         <ul>
           <li>
             <img src={asset('images/ac.png')} alt="Fully AC" /> Fully Ac
@@ -80,7 +84,7 @@ const PropertyCard = (props) => {
             className="btn-quick-view"
             onClick={handleCardClick}
           >
-            Quick View &amp; Pricing <span>→</span>
+            Quick View &amp; Pricing →
           </button>
         </div>
       </div>
